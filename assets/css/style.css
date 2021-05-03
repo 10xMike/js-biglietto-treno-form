@@ -13,14 +13,19 @@ body{
 .dati_utente{
     height: 300px;
     width: 45%;
-    background-color: aliceblue;
+    background-color: white;
 }
 h1{
-    color: aliceblue;
+    color: white;
 }
 
 .dati_biglietto{
     height: 300px;
     width: 45%;
-    background-color: aliceblue;
+    background-color: white;
+}
+.nomepasseggero{
+    height: 190px;
+    width: 190px;
+    background-color: grey;
 }
