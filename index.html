@@ -28,19 +28,19 @@
         <h1>Calcola il prezzo del tuo biglietto</h1>
         <div class="dati_utente container">
             <div class="row container d-flex justify-content-center align-items-center">
-                <div class="name">
+                <div class="name mr-4 mb-4 mt-5">
                     <form action="#">
                         <label for="name">Nome e Cognome:</label><br>
                         <input type="text" id="name" name="name" placeholder="Mario Rossi"><br>
                     </form>
                 </div>
-                <div class="km">
+                <div class="km mr-4 mb-4 mt-5">
                     <form action="#">
                         <label for="lname">Km da percorrere:</label><br>
                         <input type="text" id="path" name="path" placeholder="100 km"><br>
                     </form>
                 </div>
-                <div class="age">
+                <div class="age mt-5">
                     <label for="ages">Seleziona una fascia d'età:</label>
                     <select id="ages" name="fasciaetà" form="ageform">
                         <option value="minorenne">Minorenne</option>
@@ -50,13 +50,13 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-danger">Genera</button>
-                <button type="button" class="btn btn-outline-danger">Annulla</button>
+                <button type="button" class="btn btn-outline-danger mt-2">Genera</button>
+                <button type="button" class="btn btn-outline-danger mt-2">Annulla</button>
             </div>
         </div>
         <h1>Il tuo biglietto</h1>
         <div class="dati_biglietto container d-flex flex-column">
-            <h3 class="align-self-start">Dettaglio Passeggeri</h3>
+            <h3 class="align-self-start mb-3">Dettaglio Passeggeri</h3>
             <div class="row container">
                 <div class="nomepasseggero">
                     <h4 class="text-uppercase">Nome passeggero</h4>
@@ -65,15 +65,15 @@
                     <h4>Offerta</h4>
                     <span>Sconto Minorenne</span>                    
                 </div>
-                <div class="carrozza">
+                <div class="carrozza ml-2 text-uppercase">
                     <h4>Carrozza</h4>
                     <span>7</span>
                 </div>
-                <div class="codicecp">
+                <div class="codicecp ml-2 text-uppercase">
                     <h4>Codice CP</h4>
                     <span>97928</span>
                 </div>
-                <div class="costobiglietto">
+                <div class="costobiglietto ml-2 text-uppercase">
                     <h4>Costo Biglietto</h4>
                     <span>3.36€</span>
                 </div>
