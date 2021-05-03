@@ -7,13 +7,21 @@ Creiamo un finto biglietto del treno con:
     Categoria selezionata dall'utente
 */
 
-var nomePasseggero = document.getElementById('nomePasseggero').value;
-console.log(nomePasseggero);
-var kmPercorsi = document.getElementById('kmPercorsi').value;
-console.log(kmPercorsi);
+
+
 var codiceCP;
 var nCarrozza;
 var prezzo;
 var fasciaEtà;
 
+function bigliettoTreno() {
+    var nomePasseggero = document.getElementById('nomePasseggero').value;
+    console.log(nomePasseggero);
+    document.getElementById().innerHTML = ;
+    var kmPercorsi = document.getElementById('kmPercorsi').value;
+    console.log(kmPercorsi);
+    var fasciaEtà = document.getElementById('ages').value;
+    console.log(fasciaEtà);
+    var prezzo = kmPercorsi * 0.21; 
+}
 
