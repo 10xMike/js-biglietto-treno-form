@@ -29,19 +29,19 @@
         <div class="dati_utente container">
             <div class="row container d-flex justify-content-center align-items-center">
                 <div class="name mr-4 mb-4 mt-5">
-                    <form action="#">
+                    <div action="#" class="form_group">
                         <label for="name">Nome e Cognome:</label><br>
                         <input type="text" id="nomePasseggero" name="name" placeholder="Mario Rossi"><br>
-                    </form>
+                    </div>
                 </div>
                 <div class="km mr-4 mb-4 mt-5">
-                    <form action="#">
+                    <div action="#" class="form_group>
                         <label for="lname">Km da percorrere:</label><br>
-                        <input type="text" id="kmPercorsi" name="path" placeholder="100 km"><br>
-                    </form>
+                        <input type="number" id="kmPercorsi" name="km" placeholder="100 km" step="0.01"><br>
+                    </div>
                 </div>
-                <div class="age mt-5">
-                    <label for="ages">Seleziona una fascia d'età:</label>
+                <div class="age mr-4 mb-4 mt-5 form_group">
+                    <label for="ages">Seleziona una fascia d'età:</label><br>
                     <select id="ages" name="fasciaetà" form="ageform">
                         <option value="minorenne">Minorenne</option>
                         <option value="maggiorenne">Maggiorenne</option>

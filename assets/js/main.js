@@ -17,7 +17,7 @@ var fasciaEtà;
 function bigliettoTreno() {
     var nomePasseggero = document.getElementById('nomePasseggero').value;
     console.log(nomePasseggero);
-    document.getElementById().innerHTML = ;
+    document.getElementById().innerHTML = x;
     var kmPercorsi = document.getElementById('kmPercorsi').value;
     console.log(kmPercorsi);
     var fasciaEtà = document.getElementById('ages').value;
