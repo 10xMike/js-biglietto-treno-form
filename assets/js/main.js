@@ -9,11 +9,7 @@ Creiamo un finto biglietto del treno con:
 
 
 
-var codiceCP;
-var nCarrozza;
-var prezzo;
-var fasciaEtà;
-
+/*
 function bigliettoTreno() {
     var nomePasseggero = document.getElementById('nomePasseggero').value;
     console.log(nomePasseggero);
@@ -23,5 +19,21 @@ function bigliettoTreno() {
     var fasciaEtà = document.getElementById('ages').value;
     console.log(fasciaEtà);
     var prezzo = kmPercorsi * 0.21; 
-}
+} */
+
+document.getElementById('ticket_gen').addEventListener('click', function() {
+    var nomePasseggeroEl = document.getElementById('nomePasseggero');
+    var kmPercorsiEl = document.getElementById('kmPercorsi');
+    var fasciaEtàEl = document.getElementById('ages');
+
+    var bigliettoEl = document.querySelector('.ticket');
+
+    bigliettoEl
+    .insertAdjacentHTML('afterbegin', 
+    `
+        <div>${nomePasseggeroEl.value}</div>
+        <div>${kmPercorsiEl.value}</div>
+        <div>${fasciaEtàEl.value}</div>
+    `)
+});
 
