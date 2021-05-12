@@ -7,33 +7,45 @@ Creiamo un finto biglietto del treno con:
     Categoria selezionata dall'utente
 */
 
-
-
-/*
-function bigliettoTreno() {
-    var nomePasseggero = document.getElementById('nomePasseggero').value;
-    console.log(nomePasseggero);
-    document.getElementById().innerHTML = x;
-    var kmPercorsi = document.getElementById('kmPercorsi').value;
-    console.log(kmPercorsi);
-    var fasciaEtà = document.getElementById('ages').value;
-    console.log(fasciaEtà);
-    var prezzo = kmPercorsi * 0.21; 
-} */
-
 document.getElementById('ticket_gen').addEventListener('click', function() {
     var nomePasseggeroEl = document.getElementById('nomePasseggero');
     var kmPercorsiEl = document.getElementById('kmPercorsi');
     var fasciaEtàEl = document.getElementById('ages');
+    var prezzoStandard = kmPercorsiEl.value * 0.21;
+    var nomeBigliettoEl = document.querySelector('.nometicket');
+    var prezzoBigliettoEl = document.querySelector('.prezzoticket');
+    var testoSconto = 'Prezzo Pieno';
 
-    var bigliettoEl = document.querySelector('.ticket');
+    if (fasciaEtàEl.value == 'minorenne') {
+        prezzoStandard -= prezzoStandard * 0.2;
+        testoSconto = 'Sconto Minorenne'
+    } else if (fasciaEtàEl.value == 'anzianità') {
+        prezzoStandard -= prezzoStandard * 0.4;
+        testoSconto = 'Sconto Anziani';
+    }
 
-    bigliettoEl
-    .insertAdjacentHTML('afterbegin', 
+    nomeBigliettoEl.insertAdjacentHTML('beforeend', 
     `
-        <div>${nomePasseggeroEl.value}</div>
-        <div>${kmPercorsiEl.value}</div>
-        <div>${fasciaEtàEl.value}</div>
+        <div>Nome passeggero ${nomePasseggeroEl.value}</div>
+    `)
+    prezzoBigliettoEl.insertAdjacentHTML('beforeend', 
+    `
+        <div>Offerta ${testoSconto} ${prezzoStandard.value}</div>
     `)
 });
 
+function randomNumber(min, max) {
+    Math.floor(Math.random()*(max - min + 1)) + min;
+}
+
+{/* <div>${kmPercorsiEl.value}</div>
+        <div>${fasciaEtàEl.value}</div> */}
+        
+/* TASTO ANNULLA */
+document
+.getElementById('ticket_del')
+.addEventListener('click', function() {
+    document.getElementById('nomePasseggero').value = '';
+    document.getElementById('kmPercorsi').value = '';
+    document.getElementById('ages').value = '';
+});
